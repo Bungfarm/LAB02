@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎃 เปรม นมสด | HALLOWEEN SPOOKY NIGHT - ค่ำคืนหวานมันส์สุดหลอน</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./ข้อมูล landing page/ร้านนม/logo.png">
+
+  <!-- Google Fonts: Creepster (Halloween Title) + Prompt (Clean Thai & UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            prompt: ['Prompt', 'sans-serif'],
+            creepster: ['Creepster', 'cursive'],
+          },
+          colors: {
+            spooky: {
+              bg: '#0A0713',
+              card: '#140E26',
+              border: '#2A1D4E',
+              orange: '#FF7518',
+              orangeGlow: '#FFA733',
+              purple: '#8B5CF6',
+              purpleDark: '#5B21B6',
+              green: '#22C55E',
+              blood: '#DC2626',
+            }
+          },
+          animation: {
+            'float-ghost': 'floatGhost 6s ease-in-out infinite',
+            'float-slow': 'floatGhost 8s ease-in-out infinite 2s',
+            'pulse-glow': 'pulseGlow 2.5s infinite',
+            'spooky-wiggle': 'wiggle 1.2s ease-in-out infinite',
+            'bat-fly': 'batFly 14s linear infinite',
+          },
+          keyframes: {
+            floatGhost: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(4deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4', filter: 'drop-shadow(0 0 15px rgba(255, 117, 24, 0.4))' },
+              '50%': { opacity: '0.8', filter: 'drop-shadow(0 0 30px rgba(139, 92, 246, 0.7))' },
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-4deg)' },
+              '50%': { transform: 'rotate(4deg)' },
+            },
+            batFly: {
+              '0%': { transform: 'translateX(-100vw) translateY(0px) scale(0.7)' },
+              '50%': { transform: 'translateX(50vw) translateY(-40px) scale(1)' },
+              '100%': { transform: 'translateX(105vw) translateY(20px) scale(0.6)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: #0A0713;
+      color: #F1F5F9;
+      overflow-x: hidden;
+    }
+    
+    .font-creepster {
+      font-family: 'Creepster', cursive;
+      letter-spacing: 2px;
+    }
+
+    /* Halloween Neon Glows */
+    .glow-orange {
+      text-shadow: 0 0 10px rgba(255, 117, 24, 0.7), 0 0 25px rgba(255, 117, 24, 0.4);
+    }
+    .glow-purple {
+      text-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.5);
+    }
+    .glow-green {
+      text-shadow: 0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4);
+    }
+
+    .spooky-border {
+      border: 1px solid rgba(255, 117, 24, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(11, 7, 26, 0.6), inset 0 0 15px rgba(139, 92, 246, 0.1);
+    }
+    .spooky-border:hover {
+      border-color: rgba(255, 117, 24, 0.6);
+      box-shadow: 0 12px 40px 0 rgba(255, 117, 24, 0.2), inset 0 0 20px rgba(168, 85, 247, 0.2);
+    }
+
+    /* Spiderweb decorative corner */
+    .web-corner-tl {
+      background: radial-gradient(circle at 0% 0%, transparent 40px, rgba(255, 255, 255, 0.05) 41px, transparent 43px);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0713;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #5B21B6;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF7518;
+    }
+  </style>
+</head>
+
+<body class="selection:bg-spooky-orange selection:text-black relative">
+
+  <!-- Floating Bat Animation across screen -->
+  <div class="fixed top-24 left-0 pointer-events-none z-40 text-spooky-orange opacity-40 text-2xl animate-bat-fly">
+    <i class="fa-solid fa-bat"></i> 🦇
+  </div>
+
+  <!-- Ambient Spiderwebs in Corners -->
+  <div class="fixed top-0 left-0 w-32 h-32 pointer-events-none z-30 opacity-20 text-slate-400 text-6xl p-3">
+    <i class="fa-solid fa-spider"></i>
+  </div>
+  <div class="fixed top-0 right-0 w-32 h-32 pointer-events-none z-30 opacity-20 text-slate-400 text-6xl p-3 text-right">
+    🕸️
+  </div>
+
+  <!-- ================= 1. SPOOKY NAVBAR ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0E091D]/95 backdrop-blur-md border-b border-spooky-border transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-2 sm:gap-4">
+        
+        <!-- Logo & Brand Name with Witch Hat / Pumpkin -->
+        <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden ring-2 ring-spooky-orange/60 group-hover:ring-spooky-orange shadow-[0_0_18px_rgba(255,117,24,0.4)] transition-all duration-300 shrink-0">
+            <img 
+              src="./ข้อมูล landing page/ร้านนม/logo.png" 
+              alt="โลโก้ เปรม นมสด" 
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+            >
+            <!-- Tiny Witch Hat overlay icon -->
+            <span class="absolute -top-1 -right-1 text-xs">🎃</span>
+          </div>
+          <div class="flex flex-col shrink-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xl sm:text-2xl font-black tracking-tight text-white whitespace-nowrap">
+                เปรม นมสด
+              </span>
+              <span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-spooky-orange/20 text-spooky-orange border border-spooky-orange/40 font-creepster tracking-wider whitespace-nowrap">
+                HALLOWEEN
+              </span>
+            </div>
+            <span class="text-[11px] sm:text-xs text-purple-300 font-light flex items-center gap-1 whitespace-nowrap">
+              <span>ค่ำคืนนี้ ระวังความอร่อยเข้าสิง</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-spooky-green animate-ping shrink-0"></span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-1 xl:space-x-4 text-slate-300 font-medium text-xs xl:text-sm whitespace-nowrap shrink-0">
+          <a href="#hero" class="px-2.5 xl:px-3 py-2 rounded-lg hover:text-spooky-orange hover:bg-white/5 transition-all flex items-center gap-1.5 whitespace-nowrap">
+            <i class="fa-solid fa-ghost text-xs text-purple-400 shrink-0"></i> <span>หน้าแรก</span>
+          </a>
+          <a href="#vibe" class="px-2.5 xl:px-3 py-2 rounded-lg hover:text-spooky-orange hover:bg-white/5 transition-all flex items-center gap-1.5 whitespace-nowrap">
+            <i class="fa-solid fa-moon text-xs text-amber-400 shrink-0"></i> <span>บรรยากาศหลอน</span>
+          </a>
+          <a href="#menu" class="px-2.5 xl:px-3 py-2 rounded-lg hover:text-spooky-orange hover:bg-white/5 transition-all flex items-center gap-1.5 whitespace-nowrap">
+            <i class="fa-solid fa-wand-magic-sparkles text-xs text-rose-400 shrink-0"></i> <span>เมนูต้องสาป</span>
+          </a>
+          <a href="#trickortreat" class="px-2.5 xl:px-3 py-2 rounded-lg hover:text-spooky-orange hover:bg-white/5 transition-all flex items-center gap-1.5 whitespace-nowrap">
+            <i class="fa-solid fa-candy-cane text-xs text-emerald-400 shrink-0"></i> <span>สุ่มรับคำสาป</span>
+          </a>
+          <a href="#contact" class="px-2.5 xl:px-3 py-2 rounded-lg hover:text-spooky-orange hover:bg-white/5 transition-all flex items-center gap-1.5 whitespace-nowrap">
+            <i class="fa-solid fa-map-pin text-xs text-spooky-orange shrink-0"></i> <span>รังผี & ที่ตั้ง</span>
+          </a>
+        </nav>
+
+        <!-- CTA & Spooky Hours Badge (Desktop) -->
+        <div class="hidden sm:flex items-center gap-2 xl:gap-3 shrink-0">
+          <a 
+            href="https://www.facebook.com/premnomsod" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            title="เปิดเพจ Facebook: เปรม นมสด"
+            class="flex items-center gap-1.5 px-3 py-2 rounded-full bg-blue-600/30 hover:bg-blue-600 text-blue-200 hover:text-white border border-blue-500/40 text-xs font-semibold shadow-[0_0_12px_rgba(37,99,235,0.3)] transition-all duration-300 hover:scale-105 whitespace-nowrap shrink-0"
+          >
+            <i class="fa-brands fa-facebook text-sm text-blue-400 group-hover:text-white shrink-0"></i>
+            <span class="whitespace-nowrap">เพจร้าน</span>
+          </a>
+          
+          <div class="hidden xl:flex items-center gap-2 px-3 py-2 rounded-full bg-purple-950/70 text-purple-200 text-xs font-semibold border border-purple-800 shadow-[0_0_12px_rgba(139,92,246,0.3)] whitespace-nowrap shrink-0">
+            <i class="fa-solid fa-skull text-spooky-orange animate-spooky-wiggle shrink-0"></i>
+            <span class="whitespace-nowrap">เปิด 17:00 - 22:00 น.</span>
+          </div>
+
+          <a href="#contact" class="px-4 xl:px-5 py-2.5 rounded-full bg-gradient-to-r from-spooky-orange to-amber-600 text-black font-extrabold text-xs xl:text-sm shadow-[0_0_20px_rgba(255,117,24,0.4)] hover:shadow-[0_0_30px_rgba(255,117,24,0.7)] transition-all duration-300 hover:scale-105 flex items-center gap-2 whitespace-nowrap shrink-0">
+            <i class="fa-solid fa-broom shrink-0"></i>
+            <span class="whitespace-nowrap">หนีมาจิบชา/นม</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center shrink-0">
+          <button 
+            type="button" 
+            id="mobileMenuBtn" 
+            aria-label="Toggle Navigation"
+            class="p-2 rounded-lg text-slate-300 hover:bg-white/10 hover:text-spooky-orange focus:outline-none transition-colors"
+          >
+            <i class="fa-solid fa-bars-staggered text-2xl" id="menuIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#0F0A21]/98 border-b border-spooky-border px-4 pt-3 pb-6 shadow-2xl transition-all">
+      <div class="flex flex-col space-y-3 font-medium text-slate-200">
+        <a href="#hero" class="mobile-nav-link px-4 py-2.5 rounded-lg hover:bg-white/5 hover:text-spooky-orange flex items-center gap-2 whitespace-nowrap">
+          <span>👻</span> <span>หน้าแรก</span>
+        </a>
+        <a href="#vibe" class="mobile-nav-link px-4 py-2.5 rounded-lg hover:bg-white/5 hover:text-spooky-orange flex items-center gap-2 whitespace-nowrap">
+          <span>🌙</span> <span>บรรยากาศหลอน</span>
+        </a>
+        <a href="#menu" class="mobile-nav-link px-4 py-2.5 rounded-lg hover:bg-white/5 hover:text-spooky-orange flex items-center gap-2 whitespace-nowrap">
+          <span>🎃</span> <span>เมนูต้องสาป</span>
+        </a>
+        <a href="#trickortreat" class="mobile-nav-link px-4 py-2.5 rounded-lg hover:bg-white/5 hover:text-spooky-orange flex items-center gap-2 whitespace-nowrap">
+          <span>🍬</span> <span>สุ่มรับคำสาป</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link px-4 py-2.5 rounded-lg hover:bg-white/5 hover:text-spooky-orange flex items-center gap-2 whitespace-nowrap">
+          <span>📍</span> <span>รังผี & ที่ตั้ง</span>
+        </a>
+        <div class="pt-3 border-t border-purple-900/60 flex flex-col gap-2.5">
+          <div class="flex items-center justify-center gap-2 py-2 rounded-lg bg-purple-950/60 text-purple-200 text-xs font-semibold border border-purple-800 whitespace-nowrap">
+            <i class="fa-solid fa-clock text-spooky-orange"></i> <span>ปล่อยผี 17:00 - 22:00 น.</span>
+          </div>
+          <a href="https://www.facebook.com/premnomsod" target="_blank" rel="noopener noreferrer" class="mobile-nav-link text-center w-full py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
+            <i class="fa-brands fa-facebook text-lg shrink-0"></i> <span>เพจ Facebook: เปรม นมสด</span>
+          </a>
+          <a href="#contact" class="mobile-nav-link text-center w-full py-2.5 rounded-full bg-gradient-to-r from-spooky-orange to-amber-600 text-black font-bold shadow-lg whitespace-nowrap flex items-center justify-center gap-2">
+            <i class="fa-solid fa-location-crosshairs shrink-0"></i> <span>พิกัดร้านเปรม นมสด</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= 2. SPOOKY HERO SECTION ================= -->
+    <section id="hero" class="relative min-h-[95vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+      
+      <!-- Background Image with Dark Vignette & Spooky Violet Fog -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="./ข้อมูล landing page/ร้านนม/บรรยากาศในร้าน/493940943_2527267730945907_8741123150059989016_n.jpg" 
+          alt="หน้าร้านเปรม นมสด คืนฮาโลวีน" 
+          class="w-full h-full object-cover object-center scale-110 filter brightness-[0.55] contrast-125 saturate-125"
+        >
+        <!-- Spooky Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0713] via-[#0E091D]/80 to-[#180A2E]/80"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-[#0A0713]/90"></div>
+      </div>
+
+      <!-- Floating Animated Ghosts -->
+      <div class="absolute top-28 left-[8%] hidden lg:block text-5xl pointer-events-none animate-float-ghost opacity-75">
+        👻
+      </div>
+      <div class="absolute bottom-32 right-[10%] hidden lg:block text-5xl pointer-events-none animate-float-slow opacity-75">
+        🎃
+      </div>
+      <div class="absolute top-44 right-[15%] hidden md:block text-3xl pointer-events-none animate-spooky-wiggle opacity-60">
+        🦇
+      </div>
+
+      <!-- Hero Main Content Box -->
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10">
+        
+        <!-- Spooky Event Tag -->
+        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-950/80 backdrop-blur-md border border-spooky-orange/40 text-spooky-orange text-sm font-semibold mb-6 shadow-[0_0_25px_rgba(255,117,24,0.3)] animate-pulse">
+          <span class="text-base">🕷️</span>
+          <span class="font-creepster tracking-widest uppercase text-base">HALLOWEEN NIGHT FESTIVAL</span>
+          <span class="hidden sm:inline text-purple-400">|</span>
+          <span class="hidden sm:inline text-purple-200">คืนนี้ไม่มีหลอก มีแต่นมสดหวานมันส์</span>
+          <span class="text-base">🎃</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 leading-none text-white">
+          <span class="block font-creepster text-spooky-orange glow-orange tracking-wider">
+            PREM NOMSOD
+          </span>
+          <span class="text-3xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-spooky-orange glow-purple mt-2 block">
+            เปรม นมสด - หอม หวาน มัน สดชื่นทุกแก้ว
+          </span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="max-w-2xl mx-auto text-base sm:text-xl text-slate-300 font-light mb-8 leading-relaxed">
+          จุดแวะพักเติมความสุข กับ<span class="text-spooky-orange font-semibold">นมสดแท้ 100%</span> และ<span class="text-amber-400 font-semibold">ขนมปังปิ้งเตาถ่าน</span>หอมกรุ่น 
+          ท้าประลองความอร่อยในค่ำคืนปล่อยผี <span class="text-purple-300">เริ่มต้นเพียง 12 บาท</span> อร่อยจนวิญญาณฟิน!
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="#menu" 
+            class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-spooky-orange via-amber-500 to-orange-600 hover:from-orange-500 hover:to-amber-500 text-black font-extrabold text-lg shadow-[0_0_25px_rgba(255,117,24,0.5)] hover:shadow-[0_0_35px_rgba(255,117,24,0.8)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group"
+          >
+            <span>🎃 สั่งเมนูคืนปล่อยผี</span>
+            <i class="fa-solid fa-arrow-down text-black group-hover:translate-y-1 transition-transform"></i>
+          </a>
+          <a 
+            href="#contact" 
+            class="w-full sm:w-auto px-8 py-4 rounded-full bg-purple-950/70 hover:bg-purple-900/80 backdrop-blur-md text-purple-200 hover:text-white font-medium text-lg border border-purple-700/60 hover:border-spooky-orange shadow-[0_0_15px_rgba(139,92,246,0.3)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            <i class="fa-solid fa-compass text-spooky-orange"></i>
+            <span>พิกัดรังผี & ที่ตั้ง</span>
+          </a>
+        </div>
+
+        <!-- Spooky Highlights Ribbon -->
+        <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto text-left">
+          
+          <div class="p-3.5 rounded-xl bg-spooky-card/80 backdrop-blur-md border border-purple-900/50 shadow-lg flex items-center gap-3 hover:border-spooky-orange/60 transition-all">
+            <div class="w-11 h-11 rounded-lg bg-purple-900/50 flex items-center justify-center text-spooky-orange text-xl shrink-0">
+              🥛
+            </div>
+            <div>
+              <div class="text-[11px] text-purple-300 font-light">น้ำนมมนตรา</div>
+              <div class="text-sm font-bold text-white">นมสดแท้ 100%</div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-spooky-card/80 backdrop-blur-md border border-purple-900/50 shadow-lg flex items-center gap-3 hover:border-spooky-orange/60 transition-all">
+            <div class="w-11 h-11 rounded-lg bg-orange-950/50 flex items-center justify-center text-spooky-orange text-xl shrink-0">
+              🔥
+            </div>
+            <div>
+              <div class="text-[11px] text-orange-300 font-light">ปิ้งไฟนรก</div>
+              <div class="text-sm font-bold text-white">เตาถ่านกรอบนอกนุ่มใน</div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-spooky-card/80 backdrop-blur-md border border-purple-900/50 shadow-lg flex items-center gap-3 hover:border-spooky-orange/60 transition-all">
+            <div class="w-11 h-11 rounded-lg bg-emerald-950/50 flex items-center justify-center text-spooky-green text-xl shrink-0">
+              🪙
+            </div>
+            <div>
+              <div class="text-[11px] text-emerald-300 font-light">ราคาไม่หลอกหลอน</div>
+              <div class="text-sm font-bold text-white">เริ่มต้นแค่ 12 บาท</div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-spooky-card/80 backdrop-blur-md border border-purple-900/50 shadow-lg flex items-center gap-3 hover:border-spooky-orange/60 transition-all">
+            <div class="w-11 h-11 rounded-lg bg-pink-950/50 flex items-center justify-center text-pink-400 text-xl shrink-0">
+              🦇
+            </div>
+            <div>
+              <div class="text-[11px] text-pink-300 font-light">เปิด 17:00 - 22:00</div>
+              <div class="text-sm font-bold text-white">รวมพลแก๊งผียามค่ำ</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Spooky Bottom Wave Divider -->
+      <div class="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0E091D] to-transparent"></div>
+    </section>
+
+    <!-- ================= 3. VIBE & ATMOSPHERE (บรรยากาศร้านคืนหลอน) ================= -->
+    <section id="vibe" class="py-20 bg-[#0E091D] relative overflow-hidden">
+      <!-- Glow ambient lights -->
+      <div class="absolute top-1/4 -left-48 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute bottom-10 -right-48 w-96 h-96 bg-spooky-orange/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-purple-950/80 text-spooky-orange text-xs sm:text-sm font-semibold mb-3 border border-purple-800">
+            <span>🕯️</span> HAUNTED GATHERING <span>🕯️</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            แวะมานั่งชิลที่ <span class="text-spooky-orange glow-orange">เปรม นมสด</span>
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-spooky-orange via-purple-500 to-spooky-orange mx-auto mt-4 rounded-full shadow-[0_0_12px_rgba(255,117,24,0.6)]"></div>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 font-light">
+            แหล่งรวมพลของเหล่าซอมบี้สายหวาน แสงไฟสลัวบรรยากาศอบอุ่น ลมพัดเย็นสบาย นั่งเม้าท์มอยได้จนถึง 4 ทุ่ม
+          </p>
+        </div>
+
+        <!-- Spooky Grid Gallery -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          
+          <!-- Big Highlight: Friends Gathering at Night -->
+          <div class="md:col-span-2 lg:col-span-2 md:row-span-2 group relative rounded-2xl overflow-hidden spooky-border min-h-[320px] sm:min-h-[440px]">
+            <img 
+              src="./ข้อมูล landing page/ร้านนม/บรรยากาศในร้าน/492549908_2527277360944944_1235157329857653281_n.jpg" 
+              alt="แก๊งผีสังสรรค์ที่ร้านเปรม นมสด" 
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 filter contrast-110"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0713] via-[#0A0713]/40 to-transparent"></div>
+            
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-purple-900/90 text-purple-200 text-xs font-semibold border border-purple-500/50 backdrop-blur-sm">
+              🎃 ชุมนุมแก๊งเพื่อนสายหวาน
+            </span>
+
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-2xl font-bold flex items-center gap-2">
+                <span>พื้นที่สังสรรค์สุดครึกครื้น</span>
+                <span class="text-lg">👻</span>
+              </h3>
+              <p class="text-sm text-slate-300 mt-1 font-light">
+                ไม่ว่าจะมาเดี่ยว แอบมาเป็นคู่ หรือยกแก๊งซอมบี้มาทั้งโต๊ะ ที่นี่มีที่นั่งยาวพร้อมต้อนรับทุกคน!
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Storefront at night with fairy lights -->
+          <div class="group relative rounded-2xl overflow-hidden spooky-border min-h-[220px]">
+            <img 
+              src="./ข้อมูล landing page/ร้านนม/บรรยากาศในร้าน/493940943_2527267730945907_8741123150059989016_n.jpg" 
+              alt="หน้าร้านเปรม นมสด คืนฮาโลวีน" 
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0713] via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <span class="text-xs text-spooky-orange font-semibold">ป้ายมนตราหน้าร้าน</span>
+              <h4 class="text-base font-bold">Open 5 PM – 10 PM</h4>
+            </div>
+          </div>
+
+          <!-- Item 3: Inside counter / Brewing cauldron -->
+          <div class="group relative rounded-2xl overflow-hidden spooky-border min-h-[220px]">
+            <img 
+              src="./ข้อมูล landing page/ร้านนม/บรรยากาศในร้าน/461514505_2344750892530926_8616067714999523478_n.jpg" 
+              alt="เคาน์เตอร์ชงยาวิเศษ" 
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0713] via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <span class="text-xs text-purple-300 font-semibold">เคาน์เตอร์ปรุงยาวิเศษ</span>
+              <h4 class="text-base font-bold">ต้มสดใหม่ ชงแก้วต่อแก้ว</h4>
+            </div>
+          </div>
+
+          <!-- Item 4: Outdoor chill area -->
+          <div class="group relative rounded-2xl overflow-hidden spooky-border min-h-[220px]">
+            <img 
+              src="./ข้อมูล landing page/ร้านนม/บรรยากาศในร้าน/492518988_2527277434278270_2006123765050258299_n.jpg" 
+              alt="โซนเปิดโล่งรับลมหนาว" 
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0713] via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <span class="text-xs text-amber-300 font-semibold">โซนรับลมโชย</span>
+              <h4 class="text-base font-bold">นั่งชิลล์ไม่กลัวผี</h4>
+            </div>
+          </div>
+
+          <!-- Item 5: Mysterious warm lighting -->
+          <div class="group relative rounded-2xl overflow-hidden spooky-border min-h-[220px]">
+            <img 
+              src="./ข้อมูล landing page/ร้านนม/บรรยากาศในร้าน/494147542_2529628654043148_5498278050551664507_n.jpg" 
+              alt="แสงไฟสลัวบรรยากาศอบอุ่น" 
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0713] via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <span class="text-xs text-pink-300 font-semibold">มุมถ่ายรูปสุดเก๋</span>
+              <h4 class="text-base font-bold">แสงไฟโทนอบอุ่นละมุนตา</h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 4. WICKED HALLOWEEN MENU (เมนูแนะนำจากทางร้าน) ================= -->
+    <section id="menu" class="py-20 bg-[#0A0713] relative">
+      
+      <!-- Spooky Spider and Pumpkin Deco -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-orange-950/80 text-spooky-orange text-xs sm:text-sm font-semibold mb-3 border border-orange-800">
+            <span>🧛</span> WITCH'S RECIPES <span>🧛</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            เมนูแนะนำจากทางร้าน
+          </h2>
+          <p class="text-spooky-orange text-sm font-creepster tracking-widest mt-1">SPOOKY DELICIOUS MENU</p>
+          <div class="w-24 h-1 bg-gradient-to-r from-spooky-orange via-purple-500 to-spooky-orange mx-auto mt-4 rounded-full"></div>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 font-light">
+            ลิ้มรสเมนูอาถรรพ์สุดเข้มข้น นมสดแท้ ขนมปังปิ้งเตาถ่านไฟนรก และของทานเล่นปลุกชีพ
+          </p>
+
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8" id="menuFilters">
+            <button class="spooky-filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-gradient-to-r from-spooky-orange to-amber-600 text-black shadow-[0_0_15px_rgba(255,117,24,0.4)]" data-filter="all">
+              <i class="fa-solid fa-sparkles mr-1"></i> เมนูทั้งหมด
+            </button>
+            <button class="spooky-filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-spooky-card text-purple-200 hover:text-spooky-orange border border-purple-900/60" data-filter="drink">
+              <i class="fa-solid fa-flask text-purple-400 mr-1"></i> นม & ยาวิเศษ
+            </button>
+            <button class="spooky-filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-spooky-card text-purple-200 hover:text-spooky-orange border border-purple-900/60" data-filter="toast">
+              <i class="fa-solid fa-bread-slice text-amber-400 mr-1"></i> ปังปิ้ง & ปังเย็น
+            </button>
+            <button class="spooky-filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-spooky-card text-purple-200 hover:text-spooky-orange border border-purple-900/60" data-filter="snack">
+              <i class="fa-solid fa-bone text-emerald-400 mr-1"></i> ของว่างมัมมี่
+            </button>
+          </div>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8" id="menuGrid">
+
+          <!-- Menu 1: Pink Milk Signature (Drink) -->
+          <div class="spooky-menu-card drink group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-purple-950">
+              <img 
+                src="./ข้อมูล landing page/ร้านนม/เมนูร้าน/493473120_2528534147485932_1438962868243656304_n.jpg" 
+                alt="นมชมพูแม่มดมนตรา เปรม นมสด" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-spooky-card via-transparent to-transparent opacity-60"></div>
+              
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-pink-600/90 text-white text-xs font-bold shadow-lg flex items-center gap-1 border border-pink-400/40">
+                <span>🧙‍♀️</span> แม่มดมนตรา
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                25.- / 30.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors flex items-center gap-1.5">
+                  นมชมพูแม่มดมนตรา
+                </h3>
+                <p class="text-xs text-pink-400 font-medium mb-2">Signature Witch's Pink Elixir</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  นมสดแท้ 100% ตีเข้ากับน้ำหวานสละสูตรลับ เสิร์ฟในโหลแก้วสะกดวิญญาณพร้อมตราเปรม นมสด
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-pink-400"><i class="fa-solid fa-sparkles mr-1"></i> หวานมันสะกดใจ</span>
+                <span class="text-spooky-orange font-bold">Signature</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu 2: Chocolate Toast (Toast) -->
+          <div class="spooky-menu-card toast group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-amber-950">
+              <img 
+                src="./ข้อมูล landing page/ร้านนม/เมนูร้าน/44318093_775478239458207_3282462492936110080_n.jpg" 
+                alt="ขนมปังปิ้งช็อกโกแลตแดร็กคูล่า" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-spooky-card via-transparent to-transparent opacity-60"></div>
+              
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-red-700/90 text-white text-xs font-bold shadow-lg flex items-center gap-1 border border-red-500/40">
+                <span>🧛</span> ดาร์กแดร็กคูล่า
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                15.- / 20.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors">
+                  ปังปิ้งช็อกโกแลตแดร็กคูล่า
+                </h3>
+                <p class="text-xs text-red-400 font-medium mb-2">Dracula's Dark Chocolate Toast</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  ปังปิ้งเตาถ่านกรอบนอกนุ่มใน ทาเนยสดชุ่มๆ ราดด้วยดาร์กช็อกโกแลตดำขลับเยิ้มหยดสะใจ
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-amber-400"><i class="fa-solid fa-fire mr-1"></i> เตาถ่านหอมกรุ่น</span>
+                <span class="text-red-400 font-bold">ยอดนิยม</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu 3: Milo Volcano Toast (Toast) -->
+          <div class="spooky-menu-card toast group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-orange-950">
+              <img 
+                src="./ข้อมูล landing page/ร้านนม/เมนูร้าน/493540617_2527023530970327_8570458719034524791_n.jpg" 
+                alt="ปังปิ้งสุสานภูเขาไฟไมโล" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-spooky-card via-transparent to-transparent opacity-60"></div>
+              
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-spooky-orange text-black text-xs font-black shadow-lg flex items-center gap-1">
+                <span>🌋</span> ภูเขาไฟนรก
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                18.- / 22.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors">
+                  ปังปิ้งสุสานภูเขาไฟไมโล
+                </h3>
+                <p class="text-xs text-spooky-orange font-medium mb-2">Milo Cemetery Volcano Toast</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  ถมผงไมโลพูนดั่งขี้เถ้าสุสานโบราณ บนขนมปังปิ้งร้อนๆ ราดซ้ำด้วยนมข้นหวานฉ่ำ กรุบกรอบสะท้านใจ
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-orange-400"><i class="fa-solid fa-skull mr-1"></i> หวานมันส์ถึงกระดูก</span>
+                <span class="text-spooky-orange font-bold">ต้องลอง!</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu 4: Classic Toast & Warm Soul Milk (Toast & Drink) -->
+          <div class="spooky-menu-card toast drink group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-sky-950">
+              <img 
+                src="./ข้อมูล landing page/ร้านนม/เมนูร้าน/492412841_2527023350970345_4918805182070823305_n.jpg" 
+                alt="ปังเนยแยมและนมร้อนปลุกวิญญาณ" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-spooky-card via-transparent to-transparent opacity-60"></div>
+              
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-blue-600/90 text-white text-xs font-bold shadow-lg flex items-center gap-1 border border-blue-400/40">
+                <span>👻</span> ปลุกวิญญาณ
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                20.- / 25.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors">
+                  ปังเนยแยม + นมร้อนวิญญาณ
+                </h3>
+                <p class="text-xs text-sky-400 font-medium mb-2">Ghost Toast & Warm Soul Milk</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  ชุดปลอบประโลมวิญญาณยามดึก ขนมปังปิ้งเนยน้ำตาล/แยมส้ม เสิร์ฟคู่แก้วเคลือบวินเทจสไตล์เปรม
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-sky-300"><i class="fa-solid fa-mug-hot mr-1"></i> อุ่นสบายท้อง</span>
+                <span class="text-sky-400 font-bold">คลาสสิก</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu 5: Monster Frost Shaved Ice (Toast / Dessert) -->
+          <div class="spooky-menu-card toast group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-purple-950">
+              <img 
+                src="./ข้อมูล landing page/ร้านนม/เมนูร้าน/492846847_2529634777375869_7035050521733813971_n.jpg" 
+                alt="ปังเย็นภูเขาไฟอสูรหิมะ" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-spooky-card via-transparent to-transparent opacity-60"></div>
+              
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-purple-700 text-white text-xs font-bold shadow-lg flex items-center gap-1 border border-purple-400/40">
+                <span>🍧</span> ชามยักษ์ปราบมาร
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                35.- / 45.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors">
+                  ปังเย็นภูเขาไฟอสูรหิมะ
+                </h3>
+                <p class="text-xs text-purple-400 font-medium mb-2">Monster Frost Shaved Ice Cauldron</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  เกล็ดน้ำแข็งรสนมสดเย็นยะเยือก รองฐานด้วยขนมปังนุ่ม โรยคอร์นเฟลก โอโจ้ และช็อกโกแลตพูนชาม
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-purple-300"><i class="fa-solid fa-snowflake mr-1"></i> เย็นสะท้านโลกันตร์</span>
+                <span class="text-spooky-orange font-bold">ทานได้ 2-3 คน</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu 6: Crispy Bat Wings & Mummy Nuggets (Snack) -->
+          <div class="spooky-menu-card snack group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-amber-950">
+              <img 
+                src="./ข้อมูล landing page/ร้านนม/เมนูร้าน/44342331_775477832791581_5534039281854578688_n.jpg" 
+                alt="ปีกค้างคาวเกี๊ยวกรอบและมัมมี่นักเก็ต" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-spooky-card via-transparent to-transparent opacity-60"></div>
+              
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-amber-600 text-black text-xs font-bold shadow-lg flex items-center gap-1">
+                <span>🦇</span> ปีกค้างคาวกรอบ
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                29.- / 39.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors">
+                  เกี๊ยวค้างคาว & มัมมี่นักเก็ต
+                </h3>
+                <p class="text-xs text-amber-400 font-medium mb-2">Bat Wings & Mummy Nuggets</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  เกี๊ยวกรอบทองไส้แน่นคู่กับนักเก็ตไก่มัมมี่เนื้อแน่น ทอดร้อนๆ จิ้มน้ำจิ้มบ๊วยหรือซอสเผ็ดสูตรเด็ด
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-amber-400"><i class="fa-solid fa-utensils mr-1"></i> กรอบสะใจ</span>
+                <span class="text-amber-400 font-bold">ของทานเล่น</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu 7: Zombie Finger Fries Trio Dips (Snack) -->
+          <div class="spooky-menu-card snack group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-red-950">
+              <img 
+                src="./ข้อมูล landing page/ร้านนม/เมนูร้าน/492942909_2528367987502548_811911000064678643_n.jpg" 
+                alt="นิ้วซอมบี้ทอดกรอบ 3 ซอส" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-spooky-card via-transparent to-transparent opacity-60"></div>
+              
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-red-800 text-white text-xs font-bold shadow-lg flex items-center gap-1 border border-red-500/50">
+                <span>🧟</span> นิ้วซอมบี้ทอด
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                29.- / 35.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors">
+                  นิ้วซอมบี้ทอด 3 ซอส
+                </h3>
+                <p class="text-xs text-red-400 font-medium mb-2">Zombie Finger Fries with Blood Dips</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  มันฝรั่งแท่งทอดกรอบสีทอง เสิร์ฟพร้อม 3 น้ำจิ้มซอสมะเขือเทศเข้มข้น มายองเนส และชีสดิป
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-red-400"><i class="fa-solid fa-hand-fist mr-1"></i> จิ้มเพลิน</span>
+                <span class="text-red-400 font-bold">ของโปรดแก๊ง</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu 8: Italian Potion Soda (Drink) -->
+          <div class="spooky-menu-card drink group bg-spooky-card rounded-2xl overflow-hidden spooky-border transition-all duration-300 hover:-translate-y-2 flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/3] bg-gradient-to-br from-emerald-900 via-purple-900 to-spooky-card flex items-center justify-center text-white">
+              <div class="text-center p-6">
+                <span class="text-5xl block mb-2 animate-bounce">🧪</span>
+                <div class="text-base font-bold text-spooky-green glow-green">น้ำยาสเน่ห์ซาตาน</div>
+                <p class="text-xs text-emerald-300 mt-1">อิตาเลียนโซดา ซ่าซี้ดสะท้านคืนผี</p>
+              </div>
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-emerald-700 text-white text-xs font-bold shadow-lg">
+                <span>⚡</span> ซ่าตาค้าง
+              </span>
+              <span class="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-spooky-orange text-sm font-extrabold shadow-lg border border-spooky-orange/40">
+                25.-
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-spooky-orange transition-colors">
+                  น้ำยาวิเศษอิตาเลียนโซดา
+                </h3>
+                <p class="text-xs text-spooky-green font-medium mb-2">Spooky Poison Italian Soda</p>
+                <p class="text-sm text-slate-400 font-light line-clamp-2">
+                  บลูฮาวาย, กีวี่ปีศาจ, สตรอว์เบอร์รีเลือดแวมไพร์ ผสมโซดาซ่าสะใจ ดื่มแล้วตื่นทั้งคืน
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-purple-900/40 flex items-center justify-between text-xs text-slate-400">
+                <span class="text-emerald-400"><i class="fa-solid fa-bolt mr-1"></i> ซ่าตื่นเต็มตา</span>
+                <span class="text-spooky-green font-bold">25.- ทุกแก้ว</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 5. INTERACTIVE TRICK OR TREAT MINI GAME ================= -->
+    <section id="trickortreat" class="py-16 bg-[#0E091D] relative border-y border-purple-950/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-purple-950/60 via-spooky-card to-[#0A0713] border-2 border-spooky-orange/50 shadow-[0_0_50px_rgba(255,117,24,0.2)] relative overflow-hidden">
+          
+          <div class="text-6xl mb-4 animate-bounce-slow">
+            🎃🍬👻
+          </div>
+          <span class="text-spooky-orange font-creepster tracking-widest text-lg block mb-1">
+            MINI HALLOWEEN GAME
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+            TRICK OR TREAT? สุ่มรับคำสาปความหวาน!
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8 font-light">
+            คลิกปุ่มฟักทองด้านล่าง เพื่อเปิดกล่องสุ่มคำทำนาย หรือรับสิทธิพิเศษลับเฉพาะคืนฮาโลวีนนี้!
+          </p>
+
+          <!-- Interactive Card Display -->
+          <div id="treatResultBox" class="min-h-[80px] p-4 rounded-2xl bg-black/50 border border-purple-800/80 max-w-md mx-auto mb-6 flex items-center justify-center text-center">
+            <p id="treatText" class="text-lg font-bold text-amber-300">
+              👉 กดปุ่ม "เสี่ยงทายคำสาป" เพื่อเริ่มเล่น!
+            </p>
+          </div>
+
+          <button 
+            type="button" 
+            id="trickBtn"
+            class="px-8 py-3.5 rounded-full bg-gradient-to-r from-spooky-orange via-amber-500 to-spooky-orange text-black font-extrabold text-lg shadow-[0_0_25px_rgba(255,117,24,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+          >
+            <i class="fa-solid fa-wand-sparkles mr-2"></i> เสี่ยงทายคำสาปฮาโลวีน!
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 6. HAUNTED LOCATION & CONTACT ================= -->
+    <section id="contact" class="py-20 bg-[#0A0713] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-purple-950/80 text-spooky-orange text-xs sm:text-sm font-semibold mb-3 border border-purple-800">
+            <span>🗺️</span> HAUNTED LAIR <span>🗺️</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            พิกัดรังผี & ที่ตั้งร้าน <span class="text-spooky-orange">เปรม นมสด</span>
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-spooky-orange via-purple-500 to-spooky-orange mx-auto mt-4 rounded-full"></div>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 font-light">
+            เดินทางสะดวก ปักหมุดตามเข็มทิศเวทมนตร์มาได้เลย มีที่จอดรถหน้าร้านรองรับทั้งไม้กวาดและรถยนต์
+          </p>
+        </div>
+
+        <!-- 2-Column Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Column 1: Tombstone Store Info (5 cols) -->
+          <div class="lg:col-span-5 bg-spooky-card p-6 sm:p-8 rounded-3xl border border-purple-900/60 shadow-xl space-y-6">
+            
+            <div class="flex items-center gap-4 pb-5 border-b border-purple-900/40">
+              <div class="relative">
+                <img src="./ข้อมูล landing page/ร้านนม/logo.png" alt="โลโก้ เปรม นมสด" class="w-16 h-16 rounded-full ring-2 ring-spooky-orange object-cover shadow-[0_0_15px_rgba(255,117,24,0.4)]">
+                <span class="absolute -bottom-1 -right-1 text-sm">🎃</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-black text-white flex items-center gap-2">
+                  <span>เปรม นมสด</span>
+                </h3>
+                <p class="text-xs text-purple-300">Prem Nomsod Halloween Hideout</p>
+              </div>
+            </div>
+
+            <!-- Info items with eerie styling -->
+            <div class="space-y-4">
+              
+              <!-- Operating hours -->
+              <div class="flex items-start gap-4 p-3.5 rounded-xl bg-purple-950/40 border border-purple-900/40">
+                <div class="w-10 h-10 rounded-xl bg-spooky-orange/20 text-spooky-orange flex items-center justify-center shrink-0 mt-0.5 text-lg">
+                  <i class="fa-solid fa-moon"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">เวลาเปิดคืนปล่อยผี</h4>
+                  <p class="text-sm text-spooky-orange font-semibold mt-0.5">เปิดทุกวัน: 17:00 – 22:00 น.</p>
+                  <span class="inline-block px-2.5 py-0.5 rounded text-[11px] bg-purple-900/80 text-purple-200 mt-1">
+                    (ช่วงดึกแสงสวย นั่งชิลล์สบายที่สุด)
+                  </span>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-start gap-4 p-3.5 rounded-xl bg-purple-950/40 border border-purple-900/40">
+                <div class="w-10 h-10 rounded-xl bg-purple-900/40 text-purple-300 flex items-center justify-center shrink-0 mt-0.5 text-lg">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">ที่ตั้งและพิกัดร้าน</h4>
+                  <p class="text-sm text-slate-300 mt-0.5 leading-relaxed">
+                    ย่านตัวเมืองบุรีรัมย์ ใกล้มหาวิทยาลัยและแหล่งชุมชน
+                  </p>
+                  <p class="text-xs text-slate-400 mt-1">มีที่จอดรถริมทางสะดวกสบาย</p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-4 p-3.5 rounded-xl bg-purple-950/40 border border-purple-900/40">
+                <div class="w-10 h-10 rounded-xl bg-emerald-950/40 text-spooky-green flex items-center justify-center shrink-0 mt-0.5 text-lg">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">เบอร์สายด่วนจองโต๊ะผี</h4>
+                  <p class="text-lg font-extrabold text-spooky-orange mt-0.5">
+                    <a href="tel:0853373537" class="hover:underline">085-337-3537</a>
+                  </p>
+                  <p class="text-xs text-slate-400">โทรสั่งล่วงหน้า หรือสอบถามโต๊ะว่างได้เลย</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Social Links with Glow -->
+            <div class="pt-4 border-t border-purple-900/40">
+              <h4 class="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-3">
+                ติดตามข่าวสาร & โปรลับฮาโลวีน
+              </h4>
+              <div class="grid grid-cols-3 gap-2">
+                <a 
+                  href="https://www.facebook.com/premnomsod" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  title="เปิดเพจ Facebook: เปรม นมสด"
+                  class="flex flex-col items-center justify-center p-3 rounded-xl bg-blue-600/20 hover:bg-blue-600/40 border border-blue-500/50 text-blue-300 hover:text-white transition-all hover:scale-105 shadow-[0_0_15px_rgba(37,99,235,0.3)] group"
+                >
+                  <i class="fa-brands fa-facebook text-2xl mb-1 text-blue-400 group-hover:scale-110 transition-transform"></i>
+                  <span class="text-xs font-bold whitespace-nowrap">เปรม นมสด</span>
+                </a>
+                <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-3 rounded-xl bg-emerald-950/50 hover:bg-emerald-900/70 border border-emerald-900/50 text-emerald-300 transition-all hover:scale-105">
+                  <i class="fa-brands fa-line text-xl mb-1"></i>
+                  <span class="text-xs font-medium whitespace-nowrap">LINE OA</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-3 rounded-xl bg-pink-950/50 hover:bg-pink-900/70 border border-pink-900/50 text-pink-300 transition-all hover:scale-105">
+                  <i class="fa-brands fa-instagram text-xl mb-1"></i>
+                  <span class="text-xs font-medium whitespace-nowrap">Instagram</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Google Maps with Spooky Border (7 cols) -->
+          <div class="lg:col-span-7 bg-spooky-card p-4 sm:p-6 rounded-3xl border border-purple-900/60 shadow-xl">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <span class="text-spooky-orange text-lg">🗺️</span>
+                <h3 class="font-bold text-white text-base">แผนที่พิกัด Google Maps</h3>
+              </div>
+              <a 
+                href="https://maps.google.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-xs text-spooky-orange hover:text-amber-300 font-medium flex items-center gap-1 hover:underline"
+              >
+                <span>เปิดใน Google Maps</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Map Iframe with Dark Neon Border -->
+            <div class="relative w-full h-[360px] sm:h-[420px] rounded-2xl overflow-hidden border-2 border-purple-900 shadow-inner bg-black">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123380.0818314115!2d103.04414343542278!3d14.996160100725227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311995a5f111e0bb%3A0x6b7724128f731175!2sBuriram%20Rajabhat%20University!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth" 
+                class="w-full h-full border-0 filter invert-[90%] hue-rotate-180 contrast-125" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="พิกัดร้าน เปรม นมสด บน Google Maps"
+              ></iframe>
+            </div>
+
+            <div class="mt-3 flex items-center justify-between text-xs text-purple-300 px-1">
+              <span>📍 ปักหมุดตามพิกัด ไม่หลงเข้าป่าช้าแน่นอน</span>
+              <span class="text-spooky-green font-semibold"><i class="fa-solid fa-circle-check"></i> พร้อมรับแขกทุกค่ำคืน</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= 7. GOTHIC HALLOWEEN FOOTER ================= -->
+  <footer class="bg-[#07040D] text-slate-400 py-12 border-t border-purple-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-purple-900/40">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="./ข้อมูล landing page/ร้านนม/logo.png" alt="โลโก้ เปรม นมสด" class="w-10 h-10 rounded-full bg-white object-cover ring-1 ring-spooky-orange">
+            <span class="text-xl font-bold text-white tracking-tight">เปรม นมสด</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-purple-900/80 text-spooky-orange font-creepster">HALLOWEEN EDITION</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-md font-light leading-relaxed">
+            ค่ำคืนฮาโลวีนสุดหลอน แต่อบอุ่นด้วยนมสดแท้ 100% ขนมปังปิ้งเตาถ่านหอมเนย และของทานเล่นรสเลิศ เปิดบริการทุกค่ำคืน 17:00 – 22:00 น.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-3 text-spooky-orange">ทางลัดหนีผี</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#hero" class="hover:text-spooky-orange transition-colors">หน้าแรก (Hero)</a></li>
+            <li><a href="#vibe" class="hover:text-spooky-orange transition-colors">บรรยากาศร้าน (Vibe)</a></li>
+            <li><a href="#menu" class="hover:text-spooky-orange transition-colors">เมนูต้องสาป (Menu)</a></li>
+            <li><a href="#trickortreat" class="hover:text-spooky-orange transition-colors">สุ่มคำสาป (Mini Game)</a></li>
+            <li><a href="#contact" class="hover:text-spooky-orange transition-colors">รังผี & ที่ตั้ง (Contact)</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours & Disclaimer -->
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-3 text-spooky-orange">เวลาปล่อยผี</h4>
+          <p class="text-sm text-slate-300">เปิดให้บริการทุกวัน</p>
+          <p class="text-xl font-extrabold text-spooky-orange mt-1">17:00 – 22:00 น.</p>
+          <p class="text-xs text-purple-400 mt-2">👻 "แต่งชุดผีมาร้าน รับรอยยิ้มหวานๆ กลับบ้านทุกคน"</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>Copyright © 2026 <span class="text-slate-300 font-medium">เปรม นมสด</span>. All Rights Reserved. (Halloween Special Edition)</p>
+        <p class="flex items-center gap-1">
+          Crafted with 🎃 and 🥛 for LAB02 Halloween Project
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Facebook Page Quick Button (Bottom Left) -->
+  <a 
+    href="https://www.facebook.com/premnomsod" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    title="ไปยังเพจ Facebook: เปรม นมสด"
+    class="fixed bottom-6 left-6 z-40 flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#1877F2] text-white font-bold text-sm shadow-[0_0_25px_rgba(24,119,242,0.6)] hover:bg-[#166fe5] hover:scale-105 active:scale-95 transition-all duration-300 group whitespace-nowrap"
+  >
+    <i class="fa-brands fa-facebook text-xl group-hover:rotate-12 transition-transform shrink-0"></i>
+    <span class="font-medium tracking-wide whitespace-nowrap">Facebook เปรม นมสด</span>
+  </a>
+
+  <!-- Floating Broomstick / Back to Top Button -->
+  <button 
+    id="backToTopBtn" 
+    aria-label="Back to top" 
+    class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-gradient-to-r from-spooky-orange to-amber-600 text-black shadow-[0_0_20px_rgba(255,117,24,0.6)] hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center opacity-0 pointer-events-none z-40 text-lg"
+  >
+    <i class="fa-solid fa-broom"></i>
+  </button>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars-staggered');
+        } else {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.classList.remove('fa-bars-staggered');
+          menuIcon.classList.add('fa-xmark');
+        }
+      });
+
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars-staggered');
+        });
+      });
+    }
+
+    // 2. Menu Category Filters
+    const filterButtons = document.querySelectorAll('.spooky-filter-btn');
+    const menuCards = document.querySelectorAll('.spooky-menu-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Reset all buttons style
+        filterButtons.forEach(b => {
+          b.className = 'spooky-filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-spooky-card text-purple-200 hover:text-spooky-orange border border-purple-900/60';
+        });
+        // Active button style
+        btn.className = 'spooky-filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-gradient-to-r from-spooky-orange to-amber-600 text-black shadow-[0_0_15px_rgba(255,117,24,0.4)]';
+
+        // Filter cards
+        menuCards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'flex';
+            card.style.opacity = '0';
+            setTimeout(() => { card.style.opacity = '1'; }, 50);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 3. Trick or Treat Mini Game
+    const treats = [
+      "🎃 ผีบอกว่า: คืนนี้สั่งนมชมพูแม่มด แล้วความรักจะหวานฉ่ำ!",
+      "🧛 แดร็กคูล่ากระซิบ: ถ้าสั่งปังปิ้งช็อกโกแลต จะดูดความเครียดหายเกลี้ยง!",
+      "🍬 คำสาปฮาโลวีน: บังคับให้คุณพาเพื่อนซี้มาหารปังเย็นภูเขาไฟ 1 ชามโต!",
+      "👻 พรจากผีเปรม: คืนนี้กินของหวานได้ไม่อ้วน เพราะความสุขชนะทุกสิ่ง!",
+      "⚡ ดวงคุณคืนนี้: จะได้กลิ่นเนยหอมเตาถ่านติดจมูก ฟินจนหลับฝันดี!",
+      "🦇 เคล็ดลับแม่มด: นมสดร้อนวินเทจ 1 แก้ว ช่วยให้นอนหลับสบายไร้ฝันร้าย!"
+    ];
+
+    const trickBtn = document.getElementById('trickBtn');
+    const treatText = document.getElementById('treatText');
+
+    if (trickBtn && treatText) {
+      trickBtn.addEventListener('click', () => {
+        trickBtn.classList.add('scale-95');
+        setTimeout(() => trickBtn.classList.remove('scale-95'), 150);
+
+        treatText.style.opacity = '0';
+        setTimeout(() => {
+          const randomIndex = Math.floor(Math.random() * treats.length);
+          treatText.textContent = treats[randomIndex];
+          treatText.style.opacity = '1';
+        }, 200);
+      });
+    }
+
+    // 4. Back to Top Button & Navbar Shadow
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+
+      if (scrollPos > 40) {
+        navbar.classList.add('shadow-[0_4px_25px_rgba(0,0,0,0.8)]');
+      } else {
+        navbar.classList.remove('shadow-[0_4px_25px_rgba(0,0,0,0.8)]');
+      }
+
+      if (scrollPos > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+      } else {
+        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
